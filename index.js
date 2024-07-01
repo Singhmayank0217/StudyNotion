@@ -5,7 +5,7 @@
 // npm i cookie-parser
 // npm jsonwebtoken
 // npm i nodemailer
-// npm i opt-generator
+// npm i otp-generator
 // npm i bcrypt
 // npm install cloudinary
 // npm i razorpay
@@ -13,7 +13,7 @@
 // npm i express-fileupload
 // npm i cors
 
- 
+
 const express = require("express");
 const app = express();
 
@@ -26,7 +26,7 @@ const contactUsRoute = require("./routes/Contact");
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const {cloudinaryConnect } = require("./config/cloudinary");
+const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 
@@ -38,12 +38,15 @@ database.connect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors()); 
+app.use(cors({
+	origin: "http://localhost:3000",
+	credentials: true
+}));
 
 app.use(
-	fileUpload({ 
-		useTempFiles:true,                     //this middeare is for fileupload in local media;
-		tempFileDir:"/tmp",
+	fileUpload({
+		useTempFiles: true,                     //this middeare is for fileupload in local media;
+		tempFileDir: "/tmp",
 	})
 )
 //cloudinary connection
@@ -60,8 +63,8 @@ app.use("/api/v1/reach", contactUsRoute);
 //def route
 app.get("/", (req, res) => {
 	return res.json({
-		success:true,
-		message:'Your server is up and running....'
+		success: true,
+		message: 'Your server is up and running....'
 	});
 });
 
