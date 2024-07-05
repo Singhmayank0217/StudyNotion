@@ -1,4 +1,3 @@
-//User SubSectionSchema Schema
 const mongoose = require("mongoose");
 
 const subSectionSchema = new mongoose.Schema({
@@ -15,6 +14,8 @@ const subSectionSchema = new mongoose.Schema({
     videoUrl: {
         type: String,
     },
+
+
 });
 
-module.exports = mongoose.model("SubSectionSchema", subSectionSchema);
+module.exports = mongoose.model("SubSection", subSectionSchema);

@@ -1,4 +1,3 @@
-//User SectionSchema Schema
 const mongoose = require("mongoose");
 
 const sectionSchema = new mongoose.Schema({
@@ -13,6 +12,8 @@ const sectionSchema = new mongoose.Schema({
             ref: "SubSection",
         }
     ],
+
+
 });
 
 module.exports = mongoose.model("Section", sectionSchema);
