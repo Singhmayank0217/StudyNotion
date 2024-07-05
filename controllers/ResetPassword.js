@@ -18,9 +18,11 @@ const resetPasswordToken = async (req, res) => {
             { email: email },
             {
                 token: token,
-                resetPasswordExpires: Date.now() + 5 * 60 * 60,
+                resetPasswordExpires: Date.now() + 3600000,
             },
             { new: true });                  // {new:true} added because it return updated object so updatedDetails contain updated details;
+
+            console.log("DETAILS", updatedDetails);
 
         const url = `http://localhost:3000/update-password/${token}`                              //create url
         await mailSender(email, "Password Reset Link", `Your Link for email verification is ${url}. Please click this url to reset your password.`);   //send mail containing the url
