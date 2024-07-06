@@ -39,7 +39,7 @@ const resetPasswordToken = async (req, res) => {
             message: 'Something went wrong while sending reset pwd mail'
         })
     }
-};
+}
 
 
 //resetPassword/
@@ -76,6 +76,6 @@ const resetPassword = async (req, res) => {
             message: 'Something went wrong while sending reset pwd mail'
         })
     }
-};
+}
 
 module.exports = { resetPasswordToken, resetPassword };
