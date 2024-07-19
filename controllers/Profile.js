@@ -1,10 +1,10 @@
-const mongoose = require("mongoose");
-const Profile = require("../models/Profile");
-const CourseProgress = require("../models/CourseProgress");
-const Course = require("../models/Course");
-const User = require("../models/User");
-const { uploadImageToCloudinary } = require("../utils/imageUploader");
-const { convertSecondsToDuration } = require("../utils/secToDuration");
+const mongoose = require("mongoose")
+const Profile = require("../models/Profile")
+const CourseProgress = require("../models/CourseProgress")
+const Course = require("../models/Course")
+const User = require("../models/User")
+const { uploadImageToCloudinary } = require("../utils/imageUploader")
+const { convertSecondsToDuration } = require("../utils/secToDuration")
 
 
 // Method for updating a profile
