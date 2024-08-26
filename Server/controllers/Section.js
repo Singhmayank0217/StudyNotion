@@ -1,6 +1,6 @@
 const Section = require("../models/Section");
 const Course = require("../models/Course");
-const SubSection = require("../models/SubSection");
+const SubSection = require("../models/SubSection")
 
 
 //in course we create many section like chapter_1 , chapter_2 and in section we create many subsection like chapter_1 divided into five topic...
