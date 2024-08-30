@@ -1,5 +1,5 @@
-const { contactUsEmail } = require("../mail/templates/contactFormRes")             //contactUsEmail is the format/style of email which is send to the user;
-const mailSender = require("../utils/mailSender")
+const { contactUsEmail } = require("../mail/templates/contactFormRes");          //contactUsEmail is the format/style of email which is send to the user;
+const mailSender = require("../utils/mailSender");
 
 exports.contactUsController = async (req, res) => {
 
