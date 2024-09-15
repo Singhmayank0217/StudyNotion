@@ -7,6 +7,8 @@ import Banner from "../assets/Images/banner.mp4"
 import CodeBlocks from "../components/core/HomePage/CodeBlocks"
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
 import TimelineSection from "../components/core/HomePage/TimelineSection"
+import InstructorSection from '../components/core/HomePage/InstructorSection';
+import Footer from '../components/common/Footer';
 
 
 const Home = () => {
@@ -166,9 +168,20 @@ const Home = () => {
                 </div>
             </div>
 
-            {/*section 3*/}
+            {/* Section 3 */}
+            <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
+                {/* Become a instructor section */}
+                <InstructorSection />
 
-            {/*footer*/}
+                {/* Reviws from Other Learner */}
+                {/* <h1 className="text-center text-4xl font-semibold mt-8">
+          Reviews from other learners
+        </h1>
+        <ReviewSlider /> */}
+            </div>
+
+            {/* Footer */}
+            <Footer />
 
         </div>
     )
