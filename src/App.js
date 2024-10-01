@@ -1,9 +1,10 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
-
+import { NavBar } from "./components/common/NavBar";
 function App() {
-  return  <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
+  return <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
+    <NavBar />
     <Routes>
       <Route path="/" element={<Home />} />
     </Routes>
